@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "module": "commonjs",
+    "strict": true,
+    "target": "es6",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es6",
+      "dom"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

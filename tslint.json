@@ -1,0 +1,13 @@
+{
+    "defaultSeverity": "error",
+    "extends": "tslint:recommended",
+    "rules": {
+        "no-console": false // Enable console logging for TypeScript.
+    },
+    "jsRules": {
+        "no-console": false // Enable console logging for JavaScript.
+    },
+    "rulesDirectory": [
+
+    ]
+}
