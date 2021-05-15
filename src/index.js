@@ -32,7 +32,7 @@ class Index {
             console.log(`New connection established: ${socket}`);
             this.sockets.push(socket); // Add the new connection to the list of connected sockets.
             this.wss.on("disconnect", (socket) => this.sockets.remove(socket));
-            this.wss.on("message", (message) => console.log(message));
+            //this.wss.on("message", ());
         });
     }
 }

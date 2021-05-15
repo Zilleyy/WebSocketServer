@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d69bfb6b-db1c-40f9-bf0a-37ffc99d46fb" name="Default Changelist" comment="" />
+    <list default="true" id="d69bfb6b-db1c-40f9-bf0a-37ffc99d46fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,13 +24,19 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1sVjHT8Uq1U1QLsC82AIkoymYpr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.2" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.20.13" />
@@ -52,6 +64,7 @@
       <workItem from="1621042984890" duration="384000" />
       <workItem from="1621043384133" duration="17741000" />
       <workItem from="1621063422541" duration="6466000" />
+      <workItem from="1621070524429" duration="2814000" />
     </task>
     <servers />
   </component>
@@ -60,6 +73,7 @@
     <option name="exactExcludedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/ArrayList.js" />
+        <option value="$PROJECT_DIR$/src/Message.js" />
       </list>
     </option>
   </component>
@@ -76,6 +90,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1621048932402" />
+    <state x="647" y="310" key="Github.ShareDialog" timestamp="1621070656872">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="647" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1621070656872" />
+    <state x="576" y="109" key="Github.UntrackedFilesDialog" timestamp="1621070676702">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="576" y="109" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1621070676702" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1621052986031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

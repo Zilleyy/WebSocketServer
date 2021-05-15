@@ -1,22 +1,18 @@
 import * as express    from 'express';
 import * as http       from 'http';
 import * as WebSocket  from 'ws';
-import * as path from "path";
 import * as Network    from 'net';
-import * as Server     from "http";
-import * as Data       from "ws";
 import      ArrayList  from "./ArrayList";
-import {IncomingMessage, ServerResponse} from "http";
 
 export class Index {
 
-    private static instance: Index;
+    private static   instance : Index;
 
-    private readonly app     : http.RequestListener;
-    private readonly server  : http.Server;
-    private readonly wss     : WebSocket.Server;
+    private readonly app      : http.RequestListener;
+    private readonly server   : http.Server;
+    private readonly wss      : WebSocket.Server;
 
-    private readonly sockets : ArrayList<WebSocket> = new ArrayList();
+    private readonly sockets  : ArrayList<WebSocket> = new ArrayList();
 
     constructor() {
         Index.instance = this;
@@ -50,6 +46,7 @@ export class Index {
             this.sockets.push(socket); // Add the new connection to the list of connected sockets.
 
             this.wss.on("disconnect", (socket: WebSocket) => this.sockets.remove(socket));
+            //this.wss.on("message", ());
         });
     }
 
