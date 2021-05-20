@@ -3,9 +3,9 @@
  *
  * @description This class is an implementation of the Array class, it offers some extra features which it's superclass does not.
  */
-export default class ArrayList<E> extends Array<E> {
+class ArrayList<E> extends Array<E> {
 
-    constructor() {
+    public constructor() {
         super(); // Invokes the parent class Array's constructor.
     }
 
@@ -30,3 +30,5 @@ export default class ArrayList<E> extends Array<E> {
     }
 
 }
+
+export = ArrayList;

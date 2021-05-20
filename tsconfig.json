@@ -2,15 +2,12 @@
   "compilerOptions": {
     "alwaysStrict": true,
     "module": "commonjs",
-    "strict": true,
     "target": "es6",
+    "sourceMap": true,
     "typeRoots": [
       "node_modules/@types"
     ],
-    "lib": [
-      "es6",
-      "dom"
-    ]
+    "esModuleInterop": true
   },
   "exclude": [
     "node_modules"
