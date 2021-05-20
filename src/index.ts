@@ -2,17 +2,18 @@
 import http from 'http';
 import * as WebSocket from 'websocket';
 import {IMessage} from 'websocket';
-import {ConnectionType, Session} from "./discord";
 import WebSocketServer = WebSocket.server;
 import WebSocketRequest = WebSocket.request;
 import WebSocketConnection = WebSocket.connection;
+import {SessionManager} from "./sessionmanager";
+import {Session} from "./discord";
 
 export class Index {
 
     private readonly httpServer: http.Server;
 
     // The session/connection of the Discord bot.
-    private bot: Session;
+    private bot: WebSocketConnection;
 
     public constructor() {
 
@@ -29,18 +30,13 @@ export class Index {
         wss.on("request", (wsr: WebSocketRequest) => {
             // Accept client request to connect to web socket server.
             const wsc: WebSocketConnection = wsr.accept(null, wsr.origin);
-
-            const session: Session = new Session(wsc, ConnectionType.CLIENT);
-
-            wsc.send({
-                mute: {
-                    userId: "789339954948866079"
-                }
-            }.toString());
+            const session: Session = new Session(wsc);
+            SessionManager.add(session);
 
             // Listen for client connection closure.
             wsc.on("close", () => {
-                if(session === this.bot) this.bot = null;
+                if(wsc === this.bot) this.bot = null;
+                SessionManager.remove(wsc);
             });
 
             // Listen for client messages
@@ -51,9 +47,8 @@ export class Index {
                 // Parse the JSON now that it is safe to do so.
                 const json: any = JSON.parse(data.utf8Data);
 
-                if("bot" in json) this.bot = session;
-                else if(this.bot === session) wss.broadcast(json);
-                else if(this.bot && this.bot !== session) this.bot.socket.send(json);
+                if(SessionManager.isBot(session)) wss.broadcast(json);
+                else if(this.bot && this.bot !== wsc) this.bot.send(json);
 
                 console.log(json); // TODO remove.
             });

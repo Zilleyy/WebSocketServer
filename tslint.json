@@ -2,10 +2,12 @@
   "extends": "tslint:recommended",
   "rules": {
     "ban-ts-ignore": true,
+    "no-trailing-whitespace": false,
     "new-parens": true, // Require using () when instantiating a new object.
     "no-console": false, // Enable console logging for TypeScript.
     "no-empty": false,
     "prefer-for-of": true,
+    "unified-signatures": false,
     "no-consecutive-blank-lines": true,
     "max-classes-per-file": false,
     "no-internal-module": false,

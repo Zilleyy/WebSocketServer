@@ -1,29 +1,22 @@
 import * as WebSocket from "websocket";
+import WebSocketServer = WebSocket.server;
+import WebSocketRequest = WebSocket.request;
 import WebSocketConnection = WebSocket.connection;
+import { v4 as UUID } from 'uuid';
 
 /**
  * This module encapsulates both global and server scope objects that Discord can interpret.
  */
 export module Discord {}
 
-export default interface Mute {
-
-    mute: {
-        userId    : string;
-        duration ?: number;
-    };
-
-}
-
 export class Session {
 
     public readonly socket: WebSocketConnection;
-    // public readonly connectionInformation: ConnectionInformation;
-    public connectionType: ConnectionType;
+    public readonly uuid: string;
 
-    public constructor(socket: WebSocketConnection, connectionType: ConnectionType) {
+    public constructor(socket: WebSocketConnection) {
         this.socket = socket;
-        this.connectionType = connectionType;
+        this.uuid = UUID();
     }
 
 }
